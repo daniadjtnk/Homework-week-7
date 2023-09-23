@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Square & Rectangle Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="test.js">
+
+</head>
+<body>
+    <script src="soal1.js"></script>
+    <script src="index.js" ></script>
+    <div class="container" style="background-color: #EF9595;">
+        <h1>Square Area Calculator</h1>
+        <label for="sideLengthSA">Side Length</label>
+        <input type="number" id="sideLengthSA">
+        <button id="calculatebuttonSA">Calculate</button>
+        <p id="squareResultSA"></p>
+    </div>
+
+    <div class="container next" style="background-color: #EFB495;">
+        <h1>Square Perimeter Calculator</h1>
+        <label for="sideLengthSA">Side Length</label>
+        <input type="number" id="sideLengthSP">
+        <button id="calculatebuttonSP">Calculate</button>
+        <p id="squareResultSP"></p>
+    </div>
+
+    <div class="container next" style="background-color: #EFD595;">
+        <h1>Rectangle Area Calculator</h1>
+        <div class="input-container">
+            <label for="lengthRA">Length</label>
+             <input type="number" id="lengthRA">
+        </div>
+        <div class="input-container">
+            <label for="widthRA">Width</label>
+            <input type="number" id="widthRA">
+        </div>
+        <button id="calculatebuttonRA">Calculate</button>
+        <p id="rectangleResultA"></p>
+    </div>
+
+    <div class="container next" style="background-color: #EBEF95;">
+        <h1>Rectangle Perimeter Calculator</h1>
+        <div class="input-container">
+            <label for="lengthRP">Length</label>
+             <input type="number" id="lengthRP">
+        </div>
+        <div class="input-container">
+            <label for="widthRP">Width</label>
+            <input type="number" id="widthRP">
+        </div>
+        <button id="calculatebuttonRP">Calculate</button>
+        <p id="rectangleResultP"></p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('calculatebuttonSA').addEventListener('click', function() {
+                const sideLength = parseInt(document.getElementById('sideLengthSA').value);
+                const result = squareareaFormula(sideLength);
+            document.getElementById('squareResultSA').textContent = result;
+            });
+         });
+
+         document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('calculatebuttonSP').addEventListener('click', function() {
+                const sideLength = parseInt(document.getElementById('sideLengthSP').value);
+                const result = squareperimeterFormula(sideLength);
+            document.getElementById('squareResultSP').textContent = result;
+            });
+         });
+
+         document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('calculatebuttonRA').addEventListener('click', function() {
+                const length = parseInt(document.getElementById('lengthRA').value);
+                const width = parseInt(document.getElementById('widthRA').value);
+                const result = rectangleareaFormula(length, width);
+            document.getElementById('rectangleResultA').textContent = result;
+            });
+         });
+
+         document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('calculatebuttonRP').addEventListener('click', function() {
+                const length = parseInt(document.getElementById('lengthRP').value);
+                const width = parseInt(document.getElementById('widthRP').value);
+                const result = rectangleperimeterFormula(length, width);
+            document.getElementById('rectangleResultP').textContent = result;
+            });
+         });
+
+    </script>
+
+    
+
+    
+
+
+</body>
+</html>
